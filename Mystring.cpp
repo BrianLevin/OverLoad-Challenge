@@ -72,4 +72,10 @@ void Mystring::display() const {
  int Mystring::get_length() const { return strlen(str); }
  const char *Mystring::get_str() const { return str; }
 
+
+// overloaded insertion operator
+std::ostream &operator<<(std::ostream &os, const Mystring &rhs) {
+    os << rhs.str;
+    return os;
+}
 }
