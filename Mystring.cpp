@@ -36,4 +36,9 @@ Mystring::Mystring( Mystring &&source)
         source.str = nullptr;
 //        std::cout << "Move constructor used" << std::endl;
 }
+// Destructor
+Mystring::~Mystring() {
+    delete [] str;
+}
+
 }
