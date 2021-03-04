@@ -22,7 +22,10 @@ Mystring &operator=(const Mystring &rhs);     // Copy assignment
 
 }
 
-
+ void display() const;
+    
+    int get_length() const;                                      // getters
+    const char *get_str() const;
 
 
 
