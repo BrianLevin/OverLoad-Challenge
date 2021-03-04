@@ -20,4 +20,13 @@ Mystring::Mystring(const char *s)
             str = new char[strlen(s)+1];
             strcpy(str, s);
         }
+
+        // Copy constructor
+Mystring::Mystring(const Mystring &source) 
+    : str{nullptr} {
+        str = new char[strlen(source.str)+ 1];
+        strcpy(str, source.str);
+ //       std::cout << "Copy constructor used" << std::endl;
+
+}
 }
