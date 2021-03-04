@@ -17,7 +17,8 @@ public:
     Mystring( Mystring &&source);                         // Move constructor
     ~Mystring();                                                     // Destructor
 
-
+Mystring &operator=(const Mystring &rhs);     // Copy assignment
+    Mystring &operator=(Mystring &&rhs);           // Move assignment
 
 }
 
