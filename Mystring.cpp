@@ -40,5 +40,17 @@ Mystring::Mystring( Mystring &&source)
 Mystring::~Mystring() {
     delete [] str;
 }
+ // Copy assignment
+Mystring &Mystring::operator=(const Mystring &rhs) {
+//    std::cout << "Using copy assignment" << std::endl;
+
+    if (this == &rhs) 
+        return *this;
+    delete [] str;
+    str = new char[strlen(rhs.str) + 1];
+    strcpy(str, rhs.str);
+    return *this;
+}
+
 
 }
