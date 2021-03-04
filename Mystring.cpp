@@ -52,5 +52,15 @@ Mystring &Mystring::operator=(const Mystring &rhs) {
     return *this;
 }
 
+// Move assignment
+Mystring &Mystring::operator=( Mystring &&rhs) {
+ //   std::cout << "Using move assignment" << std::endl;
+    if (this == &rhs) 
+        return *this;
+    delete [] str;
+    str = rhs.str;
+    rhs.str = nullptr;
+    return *this;
+}
 
 }
