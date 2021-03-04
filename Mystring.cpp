@@ -28,5 +28,12 @@ Mystring::Mystring(const Mystring &source)
         strcpy(str, source.str);
  //       std::cout << "Copy constructor used" << std::endl;
 
+
+    }
+    // Move constructor
+Mystring::Mystring( Mystring &&source) 
+    :str(source.str) {
+        source.str = nullptr;
+//        std::cout << "Move constructor used" << std::endl;
 }
 }
