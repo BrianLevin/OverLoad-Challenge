@@ -2,6 +2,16 @@
 #define _MYSTRING_H_
 
 
+class Mystring
+{
+
+
+
+
+
+
+
+}
 
 
 
