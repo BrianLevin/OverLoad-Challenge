@@ -10,6 +10,12 @@ friend std::ostream &operator<<(std::ostream &os, const Mystring &rhs);
 private:
     char *str;      // pointer to a char[] that holds a C-style string
 
+public:
+  Mystring();                                                         // No-args constructor
+    Mystring(const char *s);                                     // Overloaded constructor
+    Mystring(const Mystring &source);                    // Copy constructor
+    Mystring( Mystring &&source);                         // Move constructor
+    ~Mystring();                                                     // Destructor
 
 
 
